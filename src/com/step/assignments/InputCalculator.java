@@ -13,8 +13,7 @@ public class InputCalculator {
         int sum = 0;
         double length = 0;
         System.out.println("Enter your input: ");
-        while (scanner.hasNext()) {
-            if (!scanner.hasNextInt()) break;
+        while (scanner.hasNextInt()) {
             sum += scanner.nextInt();
             length++;
         }
