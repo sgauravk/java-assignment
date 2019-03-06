@@ -1,4 +1,4 @@
-package com.step.learningJava;
+package com.step.assignments;
 
 public class MinuteAndSeconds {
     public static void main(String[] args) {

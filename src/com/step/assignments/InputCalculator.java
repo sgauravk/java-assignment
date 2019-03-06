@@ -1,8 +1,8 @@
-package com.step.learningJava;
+package com.step.assignments;
 
 import java.util.Scanner;
 
-public class inputCalculator {
+public class InputCalculator {
 
     public static void main(String[] args) {
         inputAndThenPrintSumAndAverage();

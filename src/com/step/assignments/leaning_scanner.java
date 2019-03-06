@@ -1,4 +1,4 @@
-package com.step.learningJava;
+package com.step.assignments;
 
 import java.util.Scanner;
 
