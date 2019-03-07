@@ -3,8 +3,8 @@ package com.step.assignments;
 public class IsPrime {
     public static void main(String[] args) {
         System.out.println("processing started...");
-        System.out.println(nthPrimeNumber(1));
-        System.out.println(nthPrimeNumber(10001));
+        System.out.println(nthPrimeNumber(10));
+        System.out.println(nthPrimeNumber(100010));
         System.out.println("done");
     }
 
