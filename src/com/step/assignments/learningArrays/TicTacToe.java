@@ -71,9 +71,7 @@ public class TicTacToe {
     }
 
     public static String changeTurn(List<String> players, int count) {
-        if (isEven(count)) {
-            return players.get(0);
-        }
+        if (isEven(count)) return players.get(0);
         return players.get(1);
     }
 
