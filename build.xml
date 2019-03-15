@@ -1,0 +1,56 @@
+<project name="learningJava" default="dist">
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="clearClasses">
+        <delete dir="build/classes"/>
+    </target>
+
+    <target name="init" depends="clean">
+        <mkdir dir="build/classes/test"/>
+        <mkdir dir="build/classes/src"/>
+    </target>
+
+    <target name="compile" depends="init">
+        <javac srcdir="src" destdir="build/classes/src" includeAntRuntime="false" debug="yes">
+        </javac>
+    </target>
+
+    <!--<target name="compileTest" depends="compile">-->
+        <!--<javac srcdir="test" destdir="build/classes/test" debug="yes"-->
+               <!--classpath="junit-deps/junit-4.10.jar;build/classes/src" includeAntRuntime="false">-->
+        <!--</javac>-->
+    <!--</target>-->
+
+    <!--<target name="runTest" depends="compileTest">-->
+        <!--<junit>-->
+            <!--<classpath>-->
+                <!--<pathelement location="build/classes/src"/>-->
+                <!--<pathelement location="build/classes/test"/>-->
+                <!--<pathelement location="junit-deps/junit-4.10.jar"/>-->
+            <!--</classpath>-->
+            <!--<batchtest>-->
+                <!--<fileset dir="build/classes/test">-->
+                    <!--<include name="**/*Test*"/>-->
+                <!--</fileset>-->
+            <!--</batchtest>-->
+            <!--<formatter type="brief" usefile="false"/>-->
+        <!--</junit>-->
+    <!--</target>-->
+
+
+    <target name="build" depends="compile">
+        <mkdir dir="build/distribute/lib"/>
+        <jar destfile="build/distribute/lib/learningJava.jar" basedir="build/classes/src" update="true">
+            <manifest>
+                <attribute name="Main-Class" value="com.step.assignments.tic_tac_toe.Game"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="dist" depends="build">
+        <zip destfile="build/tic-tac-toe.zip" basedir="build/distribute" update="true"/>
+    </target>
+
+</project>
